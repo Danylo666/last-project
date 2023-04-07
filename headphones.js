@@ -109,7 +109,11 @@ blocksMinor.forEach((block, index) => {
 });
 
 window.addEventListener('scroll', () => {
+  if(window.pageYOffset === 0){
+    upButton.classList.remove('active');
+  }else{
     upButton.classList.add('active');
+  };  
 });
 upButton.addEventListener('click', () => {
     upButton.classList.remove('active');
